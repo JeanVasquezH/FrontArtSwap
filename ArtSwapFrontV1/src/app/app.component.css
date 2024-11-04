@@ -1,0 +1,14 @@
+.custom-toolbar {
+    background-color: black;  
+    color: white;   
+   }
+  
+  
+  
+   .custom-menu-item {    
+    color: black;   
+    &:hover {  
+     color: black;
+      }
+  
+   }
