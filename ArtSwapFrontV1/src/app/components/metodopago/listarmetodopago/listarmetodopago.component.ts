@@ -15,13 +15,13 @@ import { RouterModule } from '@angular/router';
 })
 export class ListarmetodopagoComponent implements OnInit {
   dataSource: MatTableDataSource<Metodopago> = new MatTableDataSource();
-  displayedColumns:string[]=['id','Tipo','Descripcion','accion01', 'accion02']
+  displayedColumns:string[]=['id','Tipo','Descripcion','accion01', 'accion02'];
   constructor(private mS: MetodopagoService) {}
 
   ngOnInit(): void {
     this.mS.list().subscribe(data=>{
       console.log(data);
-      this.dataSource=new MatTableDataSource(data)
+      this.dataSource=new MatTableDataSource(data);
     });
     this.mS.getlist().subscribe((data)=>{
       this.dataSource= new MatTableDataSource(data);
