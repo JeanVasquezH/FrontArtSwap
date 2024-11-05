@@ -1,9 +1,9 @@
 <mat-toolbar class="custom-toolbar">
-    <mat-icon>menu</mat-icon>
+  <mat-icon>menu</mat-icon>
   <div>
-    <button mat-button [matMenuTriggerFor]="menuSV64" style="color: white">
-        Metodos de pago
-    </button>
+      <button mat-button [matMenuTriggerFor]="menuSV64" style="color: white">
+          Metodos de pago
+      </button>
   </div>
 </mat-toolbar>
 
@@ -11,4 +11,6 @@
   <button mat-menu-item routerLink="/metodopagos" class="custom-menu-item">Listar</button>
   <button mat-menu-item routerLink="/metodopagos/nuevo" class="custom-menu-item">Registrar</button>
 </mat-menu>
-<router-outlet></router-outlet> 
+
+<router-outlet></router-outlet>
+
