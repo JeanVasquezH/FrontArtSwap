@@ -71,8 +71,8 @@ export class CreaeditametodopagoComponent implements OnInit{
   aceptar(){
     if(this.form.valid){
       this.metodopago.idMetodoPago = this.form.value.hcodigo;
-      this.metodopago.Tipo = this.form.value.htipo;
-      this.metodopago.Descripcion= this.form.value.hdescripcion;
+      this.metodopago.tipo = this.form.value.htipo;
+      this.metodopago.descripcion= this.form.value.hdescripcion;
       if(this.edicion){
         this.mS.update(this.metodopago).subscribe(data=>{
           this.mS.list().subscribe(data=>{
@@ -87,7 +87,10 @@ export class CreaeditametodopagoComponent implements OnInit{
         });
       }
     }
-    this.router.navigate(['metodopagos']);
+    else{
+      console.error("formulario invalido")
+    }
+    this.router.navigate(['metodoPagos']);
   }
 
   init(){
@@ -95,8 +98,8 @@ export class CreaeditametodopagoComponent implements OnInit{
       this.mS.listId(this.id).subscribe((data)=>{
         this.form= new FormGroup({
           hcodigo: new FormControl(data.idMetodoPago),
-          htipo: new FormControl(data.Tipo),
-          hdescripcion: new FormControl(data.Descripcion),
+          htipo: new FormControl(data.tipo),
+          hdescripcion: new FormControl(data.descripcion),
         });
       });
     }

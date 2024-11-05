@@ -1,5 +1,5 @@
 export class Metodopago{
-    idMetodoPago:number=0
-    tipo:string=""
+    idRolusuario:number=0
     descripcion:string=""
 }
+
