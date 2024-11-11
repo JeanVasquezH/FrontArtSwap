@@ -1,0 +1,43 @@
+.custom-toolbar {
+    background-color: #212121; /* Fondo negro suave para reducir el contraste fuerte */
+    color: white;/* Texto en blanco para mejorar la legibilidad sobre fondo oscuro */
+    display: flex; /* Alinea el contenido de la barra de herramientas en un contenedor flexible */
+    justify-content: space-between; /* Distribuye los elementos a lo largo de la barra */
+    padding: 25px; /* Agrega espacio a los lados de la barra de herramientas */
+    align-items: center; /* Alinea verticalmente el contenido dentro de la barra */
+    font-family: "Times New Roman", Times, serif; /* Cambia la fuente a Times New Roman */
+}
+
+.custom-toolbar button {
+    color: white; /* Texto blanco para consistencia con la barra de herramientas */
+    text-transform: uppercase; /* Convierte el texto del botón en mayúsculas */
+    font-weight: 500; /* Espaciado entre botones */
+    margin-right: 8px; /* Espacio entre botones para evitar que se agrupen */
+    font-family: "Times New Roman", Times, serif; /* Cambia la fuente a Times New Roman */
+}
+
+.custom-toolbar mat-icon {
+    margin-right: 4px; /* Espacio entre el ícono y el texto para mayor claridad */
+}
+
+.custom-menu-item {
+    color: #424242; /* Un gris oscuro para hacer contraste */
+    display: flex;/* Alinea el ícono y el texto horizontalmente */
+    align-items: center; /* Alinea verticalmente el ícono y el texto en el centro */
+    font-weight: 400; /* Peso de fuente más ligero para diferenciar del botón principal */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Animación suave para hover */
+    font-family: "Times New Roman", Times, serif; /* Cambia la fuente a Times New Roman */
+}
+
+.custom-menu-item mat-icon {
+    margin-right: 10px; /* Espacio entre el ícono y el texto dentro del menú */
+}
+
+.custom-menu-item:hover {
+    color: #0d00bc; /* Cambia el texto a blanco al pasar el ratón */
+    background-color: #616161; /* Fondo gris medio para un efecto visual de hover */
+}
+
+.custom-menu-item:active {
+    background-color: #424242; /* Fondo gris oscuro cuando se hace clic en el elemento */
+}
