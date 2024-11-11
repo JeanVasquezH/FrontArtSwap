@@ -1,0 +1,43 @@
+<div class="container">
+  <div><h1>Registro de Usuarios</h1></div>
+  <div>
+    <form class="example-form" [formGroup]="form" (submit)="aceptar()">
+      
+      <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="hnombre" />
+      </mat-form-field>
+
+      <mat-radio-group formControlName="henable" aria-label="Selecciona una opción">
+        <div style="display: flex; justify-content: center; margin: 20px 0;">
+          <mat-radio-button [value]="true">Activado</mat-radio-button>
+          <mat-radio-button [value]="false">Desactivado</mat-radio-button>
+        </div>
+      </mat-radio-group>
+  
+      <mat-form-field>
+        <mat-label>Contraseña</mat-label>
+        <input matInput type="password" formControlName="hpassword" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Nombre usuario</mat-label>
+        <input matInput formControlName="husername" />
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Comunidades</mat-label>
+        <mat-select formControlName="hcomunid">
+          <mat-option *ngFor="let m of listarComunidades; trackBy: trackById" [value]="m.idComunidad">
+            {{ m.nombre }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+      <div>
+        <button mat-flat-button class="custom-button">Aceptar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
