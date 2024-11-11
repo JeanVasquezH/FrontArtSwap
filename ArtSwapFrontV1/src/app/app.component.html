@@ -1,16 +1,58 @@
 <mat-toolbar class="custom-toolbar">
-  <mat-icon>menu</mat-icon>
+
   <div>
-      <button mat-button [matMenuTriggerFor]="menuSV64" style="color: white">
-          Metodos de pago
-      </button>
+    <button mat-button [matMenuTriggerFor]="Menumetodopagos" style="color: white">
+      <mat-icon>payment</mat-icon>Metodos de pago
+    </button>
+
+    <button mat-button [matMenuTriggerFor]="Menucomunidades" style="color: white">
+      <mat-icon>people_outline</mat-icon>Comunidades
+    </button>
+
+    <button mat-button [matMenuTriggerFor]="MenuRoles" style="color: white">
+      <mat-icon>poll</mat-icon>Roles
+    </button>
+
+    <button mat-button [matMenuTriggerFor]="MenuUsuarios" style="color: white">
+      <mat-icon>person</mat-icon>Usuarios
+    </button>
+    
+    <button mat-button [matMenuTriggerFor]="MenuResenha" style="color: white">
+      <mat-icon> rate_review</mat-icon>Reseñas
+    </button>
+
+    <button mat-button [matMenuTriggerFor]="MenuObradeArte" style="color: white">
+      <mat-icon>photo_album</mat-icon>Obra de Arte
+    </button>
   </div>
 </mat-toolbar>
 
-<mat-menu #menuSV64="matMenu">
-  <button mat-menu-item routerLink="/metodopagos" class="custom-menu-item">Listar</button>
-  <button mat-menu-item routerLink="/metodopagos/nuevo" class="custom-menu-item">Registrar</button>
+<mat-menu #Menumetodopagos="matMenu">
+  <button mat-menu-item routerLink="/metodoPagos" class="custom-menu-item"><mat-icon>list</mat-icon>Listar Metodos de Pagos</button>
+  <button mat-menu-item routerLink="/metodoPagos/nuevo" class="custom-menu-item"><mat-icon>playlist_add</mat-icon>Registrar Metodo de Pago</button>
 </mat-menu>
 
-<router-outlet></router-outlet>
+<mat-menu #Menucomunidades="matMenu">
+  <button mat-menu-item routerLink="/comunidades" class="custom-menu-item"><mat-icon>list</mat-icon>Listar Comunidades</button>
+  <button mat-menu-item routerLink="/comunidades/nuevo" class="custom-menu-item"><mat-icon>playlist_add</mat-icon>Registrar Comunidades</button>
+</mat-menu>
 
+<mat-menu #MenuRoles="matMenu">
+  <button mat-menu-item routerLink="/roles" class="custom-menu-item"><mat-icon>list</mat-icon>Listar Roles</button>
+  <button mat-menu-item routerLink="/roles/nuevo" class="custom-menu-item"><mat-icon>playlist_add</mat-icon>Registrar Roles</button>
+</mat-menu>
+
+<mat-menu #MenuUsuarios="matMenu">
+  <button mat-menu-item routerLink="/usuarios" class="custom-menu-item"><mat-icon>list</mat-icon>Listar Usuarios</button>
+  <button mat-menu-item routerLink="/usuarios/nuevo" class="custom-menu-item"><mat-icon>playlist_add</mat-icon>Registrar Usuario</button>
+</mat-menu>
+<mat-menu #MenuResenha="matMenu">
+  <button mat-menu-item routerLink="/resenha" class="custom-menu-item"><mat-icon>list</mat-icon>Listar Reseñas</button>
+  <button mat-menu-item routerLink="/resenha/nuevo" class="custom-menu-item"><mat-icon>playlist_add</mat-icon>Registrar Reseña</button>
+</mat-menu>
+<mat-menu #MenuObradeArte="matMenu">
+  <button mat-menu-item routerLink="/obraartes" class="custom-menu-item"><mat-icon>list</mat-icon>Listar Obras de Arte</button>
+  <button mat-menu-item routerLink="/obraartes/nuevo" class="custom-menu-item"><mat-icon>playlist_add</mat-icon>Registrar Obras de Arte</button>
+</mat-menu>
+
+<router-outlet></router-outlet> 

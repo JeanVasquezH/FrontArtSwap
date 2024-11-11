@@ -87,7 +87,10 @@ export class CreaeditametodopagoComponent implements OnInit{
         });
       }
     }
-    this.router.navigate(['metodopagos']);
+    else{
+      console.error("formulario invalido")
+    }
+    this.router.navigate(['metodoPagos']);
   }
 
   init(){
