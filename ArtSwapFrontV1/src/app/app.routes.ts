@@ -12,6 +12,8 @@ import { ResenhaComponent } from './components/resenha/resenha.component';
 import { CreaeditaresenhaComponent } from './components/resenha/creaeditaresenha/creaeditaresenha.component';
 import { ObraarteComponent } from './components/obraarte/obraarte.component';
 import { CreaeditaobraarteComponent } from './components/obraarte/creaeditaobraarte/creaeditaobraarte.component';
+import { VentaComponent } from './components/venta/venta.component';
+import { CreaeditaventaComponent } from './components/venta/creaeditaventa/creaeditaventa.component';
 
 
 
@@ -77,6 +79,17 @@ export const routes: Routes = [
             },
             {
                 path: 'ediciones/:id', component: CreaeditaobraarteComponent
+            },
+        ],
+    },
+    {
+        path: 'ventas', component: VentaComponent,
+        children:[
+            {
+                path: 'nuevo', component: CreaeditaventaComponent,
+            },
+            {
+                path: 'ediciones/:id', component: CreaeditaventaComponent
             },
         ],
     },

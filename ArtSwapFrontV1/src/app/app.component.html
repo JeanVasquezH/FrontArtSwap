@@ -24,6 +24,10 @@
     <button mat-button [matMenuTriggerFor]="MenuObradeArte" style="color: white">
       <mat-icon>photo_album</mat-icon>Obra de Arte
     </button>
+
+    <button mat-button [matMenuTriggerFor]="MenuVenta" style="color: white">
+      <mat-icon>shopping_basket</mat-icon>Ventas
+    </button>
   </div>
 </mat-toolbar>
 
@@ -53,6 +57,10 @@
 <mat-menu #MenuObradeArte="matMenu">
   <button mat-menu-item routerLink="/obraartes" class="custom-menu-item"><mat-icon>list</mat-icon>Listar Obras de Arte</button>
   <button mat-menu-item routerLink="/obraartes/nuevo" class="custom-menu-item"><mat-icon>playlist_add</mat-icon>Registrar Obras de Arte</button>
+</mat-menu>
+<mat-menu #MenuVenta="matMenu">
+  <button mat-menu-item routerLink="/ventas" class="custom-menu-item"><mat-icon>list</mat-icon>Listar Ventas</button>
+  <button mat-menu-item routerLink="/ventas/nuevo" class="custom-menu-item"><mat-icon>playlist_add</mat-icon>Registrar Venta</button>
 </mat-menu>
 
 <router-outlet></router-outlet> 

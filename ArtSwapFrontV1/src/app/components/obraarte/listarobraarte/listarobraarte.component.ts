@@ -10,7 +10,7 @@ import { ObraarteService } from '../../../services/obraarte.service';
 @Component({
   selector: 'app-listarobraarte',
   standalone: true,
-  imports: [MatTableModule, MatIconModule, RouterModule,MatPaginatorModule, MatSort],
+  imports: [MatTableModule, MatIconModule, RouterModule,MatPaginatorModule],
   templateUrl: './listarobraarte.component.html',
   styleUrl: './listarobraarte.component.css'
 })
