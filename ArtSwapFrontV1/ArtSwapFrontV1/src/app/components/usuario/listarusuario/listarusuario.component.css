@@ -1,0 +1,95 @@
+/* Contenedor principal */
+.container {
+  width: 90%; /* Define el ancho del contenedor al 90% del ancho disponible */
+  margin: 2% auto; /* Centra el contenedor horizontalmente */
+  background-color: #f7f9fc; /* Color de fondo claro para resaltar el contenido */
+  padding: 20px; /* Espaciado interno para evitar que el contenido toque los bordes */
+  border-radius: 10px; /* Bordes redondeados para un aspecto más suave */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+}
+
+/* Estilo del encabezado dentro del contenedor */
+.container h1 {
+  font-family: 'Roboto', sans-serif; /* Fuente tipográfica */
+  font-size: 2em; /* Tamaño de fuente grande para el título */
+  color: #333; /* Color de texto oscuro para buen contraste */
+  margin-bottom: 1rem; /* Espacio debajo del título */
+}
+
+/* Estilo general de la tabla */
+table {
+  width: 100%; /* La tabla ocupa todo el ancho del contenedor */
+  border-collapse: collapse; /* Elimina espacios entre celdas */
+  font-family: 'Roboto', sans-serif; /* Fuente tipográfica consistente */
+}
+
+/* Elimina la sombra predeterminada de Angular Material */
+.mat-elevation-z8 {
+  box-shadow: none;
+}
+
+/* Estilo de las celdas de encabezado */
+.mat-header-cell {
+  font-weight: bold; /* Texto en negrita para resaltar los encabezados */
+  background-color: #1976d2; /* Fondo azul para los encabezados */
+  color: #fff; /* Texto blanco para contraste con el fondo azul */
+  text-align: center; /* Centra el texto horizontalmente */
+  padding: 12px; /* Espaciado interno para mayor comodidad visual */
+  font-size: 1rem; /* Tamaño de fuente estándar */
+}
+
+/* Estilo de las celdas de contenido */
+.mat-cell {
+  text-align: center; /* Centra el texto horizontalmente */
+  padding: 12px; /* Espaciado interno */
+  font-size: 0.9rem; /* Tamaño de fuente ligeramente menor para contenido */
+  color: #333; /* Color de texto oscuro para legibilidad */
+}
+
+/* Estilo de la fila de encabezado */
+.mat-header-row {
+  background-color: #1976d2; /* Fondo azul consistente con las celdas de encabezado */
+}
+
+/* Transición suave al interactuar con las filas */
+.mat-row {
+  transition: background-color 0.3s ease; /* Transición para el cambio de color de fondo */
+}
+
+/* Cambio de color al pasar el cursor sobre una fila */
+.mat-row:hover {
+  background-color: #e3f2fd; /* Fondo azul claro al hacer hover */
+}
+
+/* Estilo de los íconos dentro de las celdas */
+.mat-cell mat-icon {
+  cursor: pointer; /* Cambia el cursor para indicar que es interactivo */
+  color: hsl(189, 100%, 47%); /* Color inicial del ícono */
+  transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+/* Cambio de color al pasar el cursor sobre el ícono */
+.mat-cell mat-icon:hover {
+  color: #ff4081; /* Color rosa al hacer hover */
+}
+
+/* Estilo para las celdas pares para alternar colores de fila */
+.mat-cell:nth-child(even) {
+  background-color: #f1f8ff; /* Fondo azul muy claro para filas pares */
+}
+
+/* Bordes inferiores para encabezados y celdas */
+.mat-header-cell, .mat-cell {
+  border-bottom: 1px solid #e0e0e0; /* Línea gris clara debajo de cada celda */
+}
+
+/* Bordes redondeados en la primera celda de la fila de encabezado */
+.mat-cell:first-child, .mat-header-cell:first-child {
+  border-top-left-radius: 8px; /* Bordes redondeados en la esquina superior izquierda */
+}
+
+/* Bordes redondeados en la última celda de la fila de encabezado */
+.mat-cell:last-child, .mat-header-cell:last-child {
+  border-top-right-radius: 8px; /* Bordes redondeados en la esquina superior derecha */
+}
+

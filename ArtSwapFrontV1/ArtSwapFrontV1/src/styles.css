@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: "Times New Roman", Times, serif; /* Fuente principal cambiada a Times New Roman */
+}
+
+.container h1 {
+    color: #333; /* Color de texto oscuro para contraste con el fondo */
+    margin-bottom: 20px; /* Espacio debajo del título para separar del primer campo */
+    font-family: "Times New Roman", Times, serif; /* Asegura que el título también use Times New Roman */
+    font-size: 2em; /* Tamaño de fuente grande para el título */
+}
+mat-form-field {
+    width: 100%; /* Ancho completo del contenedor para alinearse con los otros elementos */
+    margin-bottom: 15px; /* Espacio entre cada campo para una mejor separación visual */
+    font-family: "Times New Roman", Times, serif; /* Asegura que los campos usen la misma fuente */
+}
+.custom-button {
+    background-color: hsl(4, 97%, 48%); /* Color rojo vibrante */
+    color: white; /* Color de texto en blanco para contraste */
+    padding: 8px 16px; /* Espacio interno para agrandar el botón y hacerlo más clickeable */
+    border-radius: 4px; /* Bordes ligeramente redondeados */
+    font-weight: bold; /* Texto en negrita para destacar */
+    font-family: "Times New Roman", Times, serif; /* Asegura que el botón use la misma fuente */
+    transition: background-color 0.3s ease; /* Transición suave para un efecto visual agradable al hacer hover */
+}
+
+/* Cambio de color del botón al pasar el cursor */
+.custom-button:hover {
+    background-color: hsl(4, 90%, 40%); /* Color un poco más oscuro para dar un efecto de interacción */
+}
+
+/* Oculta los saltos de línea (br) en el contenedor para evitar espacios innecesarios */
+.container br {
+    display: none;
+}
+
+/* Estilo adicional para el botón plano de Angular Material */
+button[mat-flat-button] {
+    margin-top: 20px; /* Espacio superior para separarlo de los campos del formulario */
+    padding: 10px 24px; /* Agranda el botón para mejorar la experiencia de clic */
+    font-size: 16px; /* Tamaño de fuente ligeramente mayor para mejorar la visibilidad */
+    font-family: "Times New Roman", Times, serif; /* Fuente para el botón */
+}
+
+/* Ajusta el ancho completo del selector de Angular Material (mat-select) */
+mat-select {
+    width: 100%; /* Ancho completo para que se alinee con otros campos */
+    font-family: "Times New Roman", Times, serif; /* Fuente para el selector */
+}
+
+/* Tamaño y estilo de las entradas de texto y textarea */
+mat-input-element, textarea {
+    font-size: 14px; /* Tamaño de fuente moderado para buena legibilidad */
+    padding: 10px; /* Espacio interno para que el texto no esté pegado al borde */
+    font-family: "Times New Roman", Times, serif; /* Fuente para entradas de texto */
+}
+
+/* Ajuste adicional de mat-form-field */
+mat-form-field {
+    width: 100%; /* Asegura que los campos ocupen todo el ancho disponible */
+    margin-bottom: 20px; /* Mantén un margen adecuado para separar los campos */
+}
+
+/* Estilo para las etiquetas de los campos */
+mat-label {
+    font-size: 25px;  /* Aumenta el tamaño de la fuente de las etiquetas para mejorar su visibilidad */
+    white-space: nowrap; /* Asegura que el texto de la etiqueta no se rompa */
+    font-family: "Times New Roman", Times, serif; /* Fuente para las etiquetas */
+}

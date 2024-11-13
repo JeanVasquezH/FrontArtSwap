@@ -1,0 +1,68 @@
+<div class="container" style="width: 100%; max-width: 500px;">
+  <div><h1>Registro de Obras de Arte</h1></div>
+  <div>
+    <form class="example-form" [formGroup]="form" (submit)="aceptar()">
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Titulo</mat-label>
+        <input matInput placeholder="Titulo" formControlName="htitulo" />
+      </mat-form-field>
+      <br/>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Descripcion</mat-label>
+        <input matInput placeholder="Descripcion" formControlName="hdescripcion" />
+      </mat-form-field>
+      <br/>
+
+      <mat-form-field>
+        <mat-label>Fecha de Creacion</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="hfechaCreacion">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <br/>
+
+      <mat-form-field>
+        <mat-label>Estado de Obra de Arte</mat-label> 
+        <mat-select formControlName="hestado">
+          <mat-option *ngFor="let m of listaEstado" [value]="m.value">{{ m.viewValue }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br/>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Precio</mat-label>
+        <input matInput type="number" formControlName="hprecio" />
+      </mat-form-field>
+      <br/>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Valoracion (1-10)</mat-label>
+        <input matInput type="number" formControlName="hvaloracion" />
+      </mat-form-field>
+      <br/>
+
+      <mat-form-field>
+        <mat-label>Usuario</mat-label> 
+        <mat-select formControlName="husuario">
+          <mat-option *ngFor="let m of listaUsuarios" [value]="m.idUsuario">{{ m.nombre }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br/>
+
+      <mat-form-field>
+        <mat-label>Reseña</mat-label> 
+        <mat-select formControlName="hresenha">
+          <mat-option *ngFor="let m of listaResenha" [value]="m.idResenha">{{ m.comentario }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <br/>
+
+      <div>
+        <button mat-flat-button class="custom-button" type="submit">Aceptar</button>
+      </div>
+    </form>
+  </div>
+</div>

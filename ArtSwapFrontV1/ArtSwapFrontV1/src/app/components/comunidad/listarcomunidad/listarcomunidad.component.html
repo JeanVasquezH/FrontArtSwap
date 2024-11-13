@@ -1,0 +1,56 @@
+<div class="container">
+  <h1  class="table-title">Lista de Comunidades</h1>
+  
+  <table mat-table [dataSource]="dataSource" class="community-table">
+    <!-- Código Column -->
+    <ng-container matColumnDef="c1">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Código </th>
+      <td mat-cell *matCellDef="let element"> {{element.idComunidad}} </td>
+    </ng-container>
+
+    <!-- Nombre Column -->
+    <ng-container matColumnDef="c2">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+    </ng-container>
+
+    <!-- Descripción Column -->
+    <ng-container matColumnDef="c3">
+      <th mat-header-cell *matHeaderCellDef> Descripción </th>
+      <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
+    </ng-container>
+
+    <!-- Fecha de creación Column -->
+    <ng-container matColumnDef="c4">
+      <th mat-header-cell *matHeaderCellDef> Fecha de creación </th>
+      <td mat-cell *matCellDef="let element"> {{element.fechaCreacion}} </td>
+    </ng-container>
+
+    <!-- Eliminar Action Column -->
+    <ng-container matColumnDef="accion01">
+      <th mat-header-cell *matHeaderCellDef> Eliminar </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-icon-button color="warn" (click)="eliminar(element.idComunidad)">
+          <mat-icon class="icon">delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <!-- Actualizar Action Column -->
+    <ng-container matColumnDef="accion02">
+      <th mat-header-cell *matHeaderCellDef> Actualizar </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-icon-button color="warn" [routerLink]="['/ediciones', element.idComunidad]">
+          <mat-icon class="icon">edit</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <!-- Table Header and Row Definitions -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <!-- Paginator -->
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements"></mat-paginator>
+</div>

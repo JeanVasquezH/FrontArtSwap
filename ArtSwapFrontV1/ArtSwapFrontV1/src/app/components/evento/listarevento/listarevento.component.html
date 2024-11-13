@@ -1,0 +1,74 @@
+<div class="container">
+
+    <div  style="text-align: center;margin: 5%;"><h1>Lista de Eventos</h1></div>
+    <div>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+           
+            <ng-container matColumnDef="c1">           
+             <th mat-header-cell *matHeaderCellDef>Código </th>           
+             <td mat-cell *matCellDef="let element"> {{element.idEvento}} </td>           
+            </ng-container>
+           
+                  
+            <ng-container matColumnDef="c2">           
+             <th mat-header-cell *matHeaderCellDef> Titulo </th>           
+             <td mat-cell *matCellDef="let element"> {{element.descripcion}}  </td>           
+            </ng-container>
+
+            <ng-container matColumnDef="c3">           
+             <th mat-header-cell *matHeaderCellDef> Fecha Inicial </th>           
+             <td mat-cell *matCellDef="let element"> {{element.fechaInicio}} </td>           
+            </ng-container>
+                    
+            <ng-container matColumnDef="c4">           
+             <th mat-header-cell *matHeaderCellDef> Fecha Final </th>           
+             <td mat-cell *matCellDef="let element"> {{element.fechaFin}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="c5">           
+                <th mat-header-cell *matHeaderCellDef> Tipo </th>           
+                <td mat-cell *matCellDef="let element"> {{element.tipo}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="c6">           
+                <th mat-header-cell *matHeaderCellDef> Ubicacion </th>           
+                <td mat-cell *matCellDef="let element"> {{element.ubicacion}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="c7">           
+                <th mat-header-cell *matHeaderCellDef> Valoracion </th>           
+                <td mat-cell *matCellDef="let element"> {{element.valoracion}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="c8">
+                <th mat-header-cell *matHeaderCellDef> Nombre del Creador </th>
+                <td mat-cell *matCellDef="let element"> {{element.usua.nombre}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="c9">
+                <th mat-header-cell *matHeaderCellDef> Titulo de Obra de Arte </th>
+                <td mat-cell *matCellDef="let element"> {{element.obraArt.titulo}} </td>
+            </ng-container>
+           
+            <ng-container matColumnDef="accion01">
+                <th mat-header-cell *matHeaderCellDef> Eliminar </th>
+                <td mat-cell *matCellDef="let element" (click)="eliminar(element.idObraArte)"> 
+                    <mat-icon style="color: hsl(189, 100%, 47%)">delete_outline</mat-icon> 
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="accion02">
+                <th mat-header-cell *matHeaderCellDef>Modificar </th>
+                <td mat-cell *matCellDef="let element" [routerLink]="['ediciones',element.idResenha]">
+                    <mat-icon style="color: hsl(189, 100%, 47%)">edit</mat-icon> 
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+           
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+           
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Select page of periodic elements"></mat-paginator>
+    </div>
+</div>
