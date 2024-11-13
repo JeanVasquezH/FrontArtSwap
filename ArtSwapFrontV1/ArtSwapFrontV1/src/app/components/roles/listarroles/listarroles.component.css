@@ -1,7 +1,7 @@
 /* Contenedor principal */
 .container {
   width: 90%; /* Define el ancho del contenedor al 90% del ancho disponible */
-  margin: auto; /* Centra el contenedor horizontalmente */
+  margin: 10% auto; /* Centra el contenedor horizontalmente */
   background-color: #f7f9fc; /* Color de fondo claro para resaltar el contenido */
   padding: 20px; /* Espaciado interno para evitar que el contenido toque los bordes */
   border-radius: 10px; /* Bordes redondeados para un aspecto más suave */

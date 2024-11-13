@@ -1,7 +1,7 @@
 /* Contenedor principal: define el ancho máximo, margen y estilo del contenedor del formulario */
 .container {
     max-width: 600px; /* Limita el ancho máximo para que el formulario se vea bien en pantallas grandes */
-    margin: 5% auto; /* Centra el contenedor horizontalmente y le da margen vertical */
+    margin: 10% auto; /* Centra el contenedor horizontalmente y le da margen vertical */
     text-align: center; /* Centra el texto y los elementos internos */
     padding: 20px; /* Añade un espacio interno para que los elementos no estén pegados al borde */
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Añade una sombra ligera para un efecto de profundidad */

@@ -14,6 +14,8 @@ import { ObraarteComponent } from './components/obraarte/obraarte.component';
 import { CreaeditaobraarteComponent } from './components/obraarte/creaeditaobraarte/creaeditaobraarte.component';
 import { VentaComponent } from './components/venta/venta.component';
 import { CreaeditaventaComponent } from './components/venta/creaeditaventa/creaeditaventa.component';
+import { ListareventoComponent } from './components/evento/listarevento/listarevento.component';
+import { CreaeditaeventoComponent } from './components/evento/creaeditaevento/creaeditaevento.component';
 
 
 
@@ -90,6 +92,17 @@ export const routes: Routes = [
             },
             {
                 path: 'ediciones/:id', component: CreaeditaventaComponent
+            },
+        ],
+    },
+    {
+        path: 'eventos', component: ListareventoComponent,
+        children:[
+            {
+                path: 'nuevo', component: CreaeditaeventoComponent,
+            },
+            {
+                path: 'ediciones/:id', component: CreaeditaeventoComponent
             },
         ],
     },

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { MetodopagoComponent } from './components/metodopago/metodopago.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
@@ -11,7 +10,6 @@ import { RouterModule, RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [
     RouterOutlet,
-    MetodopagoComponent,
     MatToolbarModule,
     MatIconModule,
     MatMenuModule,

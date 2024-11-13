@@ -5,11 +5,12 @@ import { MetodopagoService } from '../../../services/metodopago.service';
 import { Metodopago } from '../../../models/Metodopago';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-listarmetodopago',
   standalone: true,
-  imports: [MatTableModule, MatIconModule, RouterModule],
+  imports: [MatTableModule, MatIconModule, RouterModule,MatPaginatorModule],
   templateUrl: './listarmetodopago.component.html',
   styleUrl: './listarmetodopago.component.css'
 })

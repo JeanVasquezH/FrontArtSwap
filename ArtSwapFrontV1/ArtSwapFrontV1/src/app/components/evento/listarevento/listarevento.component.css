@@ -1,12 +1,12 @@
 /* Contenedor principal */
 .container {
     width: 90%; /* Define el ancho del contenedor al 90% del ancho disponible */
-    margin: 5% auto; /* Centra el contenedor horizontalmente */
+    margin: 8% auto; /* Centra el contenedor horizontalmente */
     background-color: #f7f9fc; /* Color de fondo claro para resaltar el contenido */
     padding: 20px; /* Espaciado interno para evitar que el contenido toque los bordes */
     border-radius: 10px; /* Bordes redondeados para un aspecto más suave */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
-  }
+}
   
   /* Estilo del encabezado dentro del contenedor */
   .container h1 {
@@ -14,8 +14,7 @@
     font-size: 2em; /* Tamaño de fuente grande para el título */
     color: #333; /* Color de texto oscuro para buen contraste */
     margin-bottom: 1rem; /* Espacio debajo del título */
-    text-align: center;
-  }
+}
   
   /* Estilo general de la tabla */
   table {
@@ -90,7 +89,6 @@
   }
   
   /* Bordes redondeados en la última celda de la fila de encabezado */
-  .mat-cell:last-child, .mat-header-cell:last-child {
+.mat-cell:last-child, .mat-header-cell:last-child {
     border-top-right-radius: 8px; /* Bordes redondeados en la esquina superior derecha */
   }
-  

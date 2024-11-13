@@ -1,43 +1,129 @@
+/* Barra de herramientas personalizada */
 .custom-toolbar {
-    background-color: #212121; /* Fondo negro suave para reducir el contraste fuerte */
-    color: white;/* Texto en blanco para mejorar la legibilidad sobre fondo oscuro */
-    display: flex; /* Alinea el contenido de la barra de herramientas en un contenedor flexible */
-    justify-content: space-between; /* Distribuye los elementos a lo largo de la barra */
-    padding: 25px; /* Agrega espacio a los lados de la barra de herramientas */
-    align-items: center; /* Alinea verticalmente el contenido dentro de la barra */
-    font-family: "Times New Roman", Times, serif; /* Cambia la fuente a Times New Roman */
+    background-color: #212121; /* Fondo oscuro para reducir contraste */
+    color: white; /* Texto en blanco para legibilidad */
+    display: flex; /* Contenedor flexible para organizar elementos en línea */
+    justify-content: space-between; /* Distribuye el contenido a los lados */
+    padding: 25px; /* Espacio alrededor del contenido de la barra */
+    align-items: center; /* Alinea verticalmente los elementos */
+    font-family: "Times New Roman", Times, serif; /* Fuente clásica para un estilo elegante */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil debajo de la barra */
+}
+
+.logo-section {
+    display: flex; /* Mantiene el logotipo y el nombre de la empresa en línea */
+    align-items: center; /* Alinea verticalmente logotipo y texto */
+    margin-right: auto; /* Alinea la sección de logo a la izquierda */
+}
+
+.company-name {
+    font-size: 1.5em; /* Tamaño de texto para el nombre de la empresa */
+    font-weight: bold; /* Hace que el nombre de la empresa sea más visible */
+    margin-right: 10px; /* Espacio entre el nombre y el logotipo */
+}
+
+.logo {
+    width: 40px; /* Tamaño del logotipo */
+    height: auto; /* Ajusta la altura automáticamente */
+}
+
+/* Sección de botones en la barra de herramientas */
+.button-section {
+    display: flex; /* Alinea los botones en línea */
+    gap: 8px; /* Espacio entre cada botón */
 }
 
 .custom-toolbar button {
-    color: white; /* Texto blanco para consistencia con la barra de herramientas */
-    text-transform: uppercase; /* Convierte el texto del botón en mayúsculas */
-    font-weight: 500; /* Espaciado entre botones */
-    margin-right: 8px; /* Espacio entre botones para evitar que se agrupen */
-    font-family: "Times New Roman", Times, serif; /* Cambia la fuente a Times New Roman */
+    color: white; /* Texto en blanco para consistencia con la barra */
+    background: none; /* Fondo transparente para un diseño simple */
+    border: none; /* Sin bordes para un estilo limpio */
+    text-transform: uppercase; /* Texto en mayúsculas para énfasis */
+    font-weight: 500; /* Peso de fuente intermedio */
+    margin-right: 8px; /* Espacio entre botones */
+    font-family: inherit; /* Usa la fuente heredada de la barra */
+    cursor: pointer; /* Cambia el cursor a una mano para interacción */
+    transition: color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
 }
 
+.custom-toolbar button:hover {
+    color: #0041a2; /* Cambia el color al pasar el ratón */
+    transform: scale(1.05); /* Efecto de agrandamiento al hacer hover */
+}
+
+/* Íconos en la barra de herramientas */
 .custom-toolbar mat-icon {
-    margin-right: 4px; /* Espacio entre el ícono y el texto para mayor claridad */
+    margin-right: 4px; /* Espacio entre el ícono y el texto */
 }
 
 .custom-menu-item {
-    color: #424242; /* Un gris oscuro para hacer contraste */
-    display: flex;/* Alinea el ícono y el texto horizontalmente */
-    align-items: center; /* Alinea verticalmente el ícono y el texto en el centro */
-    font-weight: 400; /* Peso de fuente más ligero para diferenciar del botón principal */
-    transition: color 0.3s ease, background-color 0.3s ease; /* Animación suave para hover */
-    font-family: "Times New Roman", Times, serif; /* Cambia la fuente a Times New Roman */
+    color: #707070; /* Color gris oscuro para contraste */
+    display: flex; /* Mantiene el ícono y texto en línea */
+    align-items: center; /* Alinea el contenido verticalmente */
+    font-weight: 400; /* Peso de fuente ligero para distinguir del botón */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transición en hover */
+    font-family: inherit; /* Usa la fuente de la barra */
+    padding: 8px; /* Espacio interno para comodidad de clic */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Muestra un puntero de mano */
 }
 
 .custom-menu-item mat-icon {
-    margin-right: 10px; /* Espacio entre el ícono y el texto dentro del menú */
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
 }
 
 .custom-menu-item:hover {
-    color: #0d00bc; /* Cambia el texto a blanco al pasar el ratón */
-    background-color: #616161; /* Fondo gris medio para un efecto visual de hover */
+    color: rgb(2, 18, 78); /* Cambia el color del texto a blanco en hover */
+    background-color: #616161; /* Fondo gris en hover */
 }
 
 .custom-menu-item:active {
-    background-color: #424242; /* Fondo gris oscuro cuando se hace clic en el elemento */
+    background-color: #424242; /* Fondo más oscuro al hacer clic */
+}
+
+/* Estilo del pie de página */
+.custom-footer {
+    background-color: #222; /* Fondo oscuro para el pie de página */
+    color: white; /* Texto en blanco */
+    display: flex; /* Alinea los elementos en una sola línea */
+    justify-content: center; /* Centra todo el contenido en una línea */
+    align-items: center; /* Alinea verticalmente los elementos */
+    padding: 1rem; /* Espacio alrededor del contenido */
+    font-family: "Times New Roman", Times, serif; /* Fuente clásica */
+    position: relative; /* Necesario para mantenerlo en su lugar */
+    bottom: 0; /* Mantiene el pie de página en la parte inferior */
+    width: 100%; /* Asegura que el pie de página ocupe todo el ancho */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Sombra para destacar el pie de página */
+}
+
+/* Contenedor de los íconos de redes sociales */
+.custom-footer .socials {
+    margin-left: 10px; /* Espacio entre el texto y los íconos */
+}
+
+/* Estilo de los íconos de redes sociales */
+.custom-footer .socials img {
+    width: 35px; /* Tamaño de los íconos de redes sociales */
+    margin: 0 10px; /* Espacio entre íconos */
+    vertical-align: middle; /* Alinea verticalmente los íconos con el texto */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transición en hover */
+}
+
+.custom-footer .socials img:hover {
+    transform: scale(1.2); /* Aumenta el tamaño en hover */
+    filter: brightness(1.3); /* Hace el ícono más brillante en hover */
+}
+
+/* Estructura de la página para asegurar el pie de página al final */
+body, html {
+    display: flex;
+    flex-direction: column;
+    min-height: 250vh; /* Asegura que la página ocupe toda la altura de la ventana */
+    margin: 0;
+}
+
+/* Contenedor principal que ocupa todo el espacio disponible */
+main {
+    flex: 1; /* Expande el contenido principal para llenar el espacio */
+    padding: 2rem; /* Espacio alrededor del contenido */
+    min-height: calc(2500vh - 300px); /* Ajusta para dejar suficiente espacio para la barra de herramientas y pie de página */
 }
