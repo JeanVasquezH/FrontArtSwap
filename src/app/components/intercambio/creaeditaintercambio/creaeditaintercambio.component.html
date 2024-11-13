@@ -1,0 +1,48 @@
+<div class="container" style="width: 100%; max-width: 500px;">
+    <div><h1>Registro de Intercambio </h1></div>
+    <div>
+      <form class="example-form" [formGroup]="form" (submit)="aceptar()">
+
+        <mat-form-field>
+            <mat-label>Fecha de Intercambio</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="hfechaIntercambio">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <br/>
+
+        <mat-form-field>
+            <mat-label>Estado</mat-label>
+            <mat-select  formControlName="hestado">
+              @for (m of listarestados; track m) {
+              <mat-option [value]="m.value">{{ m.viewValue }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+
+
+        <mat-form-field>
+            <mat-label>Metodo Pago</mat-label> 
+            <mat-select formControlName="husuario">
+              <mat-option *ngFor="let m of listarusuario" [value]="m.idUsuario">{{ m.nombre }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Titulos Obras de Arte</mat-label> 
+            <mat-select formControlName="hobraarte">
+              <mat-option *ngFor="let m of listaobraarte" [value]="m.idObraArte">{{ m.titulo }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <br/>
+
+       
+        <br/>
+  
+        <div>
+          <button mat-flat-button class="custom-button" type="submit">Aceptar</button>
+        </div>
+      </form>
+    </div>
+  </div>

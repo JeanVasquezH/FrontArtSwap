@@ -1,0 +1,53 @@
+<div class="container">
+
+    <div  style="text-align: center;margin: 5%;"><h1>Lista de Intercambio</h1></div>
+    <div>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+           
+            <ng-container matColumnDef="c1">           
+             <th mat-header-cell *matHeaderCellDef>Código </th>           
+             <td mat-cell *matCellDef="let element"> {{element.idIntercambio}} </td>           
+            </ng-container>
+           
+            <ng-container matColumnDef="c2">           
+             <th mat-header-cell *matHeaderCellDef> Fecha de intercambio </th>           
+             <td mat-cell *matCellDef="let element"> {{element.fechaIntercambio}}  </td>           
+            </ng-container>
+
+            <ng-container matColumnDef="c3">           
+                <th mat-header-cell *matHeaderCellDef> Estado </th>           
+                <td mat-cell *matCellDef="let element"> {{element.estado}}  </td>           
+            </ng-container>
+
+            <ng-container matColumnDef="c4">           
+                <th mat-header-cell *matHeaderCellDef> Nombre </th>           
+                <td mat-cell *matCellDef="let element"> {{element.usuario.nombre}}  </td>           
+            </ng-container>
+
+            <ng-container matColumnDef="c5">
+                <th mat-header-cell *matHeaderCellDef> Obra </th>
+                <td mat-cell *matCellDef="let element"> {{element.obraArte.titulo}} </td>
+            </ng-container>
+           
+            <ng-container matColumnDef="accion01">
+                <th mat-header-cell *matHeaderCellDef> Eliminar </th>
+                <td mat-cell *matCellDef="let element" (click)="eliminar(element.idVenta)"> 
+                    <mat-icon style="color: hsl(189, 100%, 47%)">delete_outline</mat-icon> 
+                </td>
+            </ng-container>
+
+            <ng-container matColumnDef="accion02">
+                <th mat-header-cell *matHeaderCellDef>Modificar </th>
+                <td mat-cell *matCellDef="let element" [routerLink]="['ediciones',element.idVenta]">
+                    <mat-icon style="color: hsl(189, 100%, 47%)">edit</mat-icon> 
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+           
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+           
+        </table>
+
+    </div>
+</div>
