@@ -1,0 +1,108 @@
+/* Barra de herramientas personalizada */
+.custom-toolbar {
+    background-color: #212121; /* Fondo oscuro para reducir contraste */
+    color: white; /* Texto en blanco para legibilidad */
+    display: flex; /* Contenedor flexible para organizar elementos en línea */
+    justify-content:flex-start; /* Distribuye el contenido a los lados */
+    padding: 50px 25px; /* Espacio alrededor del contenido de la barra */
+    align-items: center; /* Alinea verticalmente los elementos */
+    font-family: "Times New Roman", Times, serif; /* Fuente clásica para un estilo elegante */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil debajo de la barra */
+}
+
+
+/* Sección de botones en la barra de herramientas */
+.button-section {
+    display: flex; /* Alinea los botones en línea */
+    gap: 8px; /* Espacio entre cada botón */
+}
+
+.custom-toolbar button {
+    color: white; 
+    background: none; 
+    border: none; 
+    text-transform: uppercase; 
+    font-weight: 500; 
+    font-family: inherit; 
+    cursor: pointer; 
+    transition: color 0.3s ease, transform 0.2s ease;
+    /* Elimina margen a la derecha */
+    margin-right: 0;
+}
+
+.custom-toolbar button:hover {
+    color: #0041a2; /* Cambia el color al pasar el ratón */
+    transform: scale(1.05); /* Efecto de agrandamiento al hacer hover */
+}
+
+/* Íconos en la barra de herramientas */
+.custom-toolbar mat-icon {
+    margin-right: 4px; /* Espacio entre el ícono y el texto */
+}
+
+.custom-menu-item {
+    color: #707070; /* Color gris oscuro para contraste */
+    display: flex; /* Mantiene el ícono y texto en línea */
+    align-items: center; /* Alinea el contenido verticalmente */
+    font-weight: 400; /* Peso de fuente ligero para distinguir del botón */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transición en hover */
+    font-family: inherit; /* Usa la fuente de la barra */
+    padding: 8px; /* Espacio interno para comodidad de clic */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Muestra un puntero de mano */
+}
+
+.custom-menu-item mat-icon {
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
+
+.custom-menu-item:hover {
+    color: rgb(2, 18, 78); /* Cambia el color del texto a blanco en hover */
+    background-color: #616161; /* Fondo gris en hover */
+}
+
+.custom-menu-item:active {
+    background-color: #424242; /* Fondo más oscuro al hacer clic */
+}
+
+/* Estilo del pie de página */
+
+
+/* Contenedor de los íconos de redes sociales */
+
+
+/* Estilo de los íconos de redes sociales */
+
+
+
+/* Estructura de la página para asegurar el pie de página al final */
+body, html {
+    display: flex;
+    flex-direction: column;
+    min-height: 250vh; /* Asegura que la página ocupe toda la altura de la ventana */
+    margin: 0;
+}
+
+/* Contenedor principal que ocupa todo el espacio disponible */
+main {
+    flex: 1; /* Expande el contenido principal para llenar el espacio */
+    padding: 2rem; /* Espacio alrededor del contenido */
+    min-height: calc(2500vh - 300px); /* Ajusta para dejar suficiente espacio para la barra de herramientas y pie de página */
+}
+
+
+
+/* Ajustes de los botones en la barra de herramientas */
+.button-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Alinea los botones a la izquierda */
+    gap: 8px;
+    margin-top: 10px;
+}
+
+
+
+.right-menu {
+    margin-left: auto; /* Empuja el menú de usuarios a la derecha */
+  }

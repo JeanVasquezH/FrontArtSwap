@@ -1,0 +1,83 @@
+/* Estilo general del contenedor */
+.container {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: #c3bebb; /* Fondo del formulario */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #2e2e2e;
+    font-family: Arial, sans-serif;
+}
+
+/* Logo */
+.container img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Título */
+h2 {
+    color: #6a301f; /* Color del título */
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* Campos del formulario */
+.example-full-width {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.mat-form-field {
+    background-color: #ffffff;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.mat-form-field-label {
+    color: #555555; /* Color de la etiqueta */
+}
+
+/* Color del texto de entrada */
+.mat-input-element {
+    color: #2e2e2e;
+}
+
+.mat-form-field-underline {
+    background-color: #e4ad5e; /* Línea de los campos */
+}
+
+/* Botón de inicio de sesión */
+.custom-button {
+    background-color: #6a301f; /* Fondo del botón */
+    color: #ffffff; /* Texto del botón */
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+    background-color: #e4ad5e; /* Color al pasar el ratón sobre el botón */
+}
+
+.custom-button:focus {
+    background-color: #555555; /* Color cuando el botón está enfocado */
+}
+
+/* Fondo de la página */
+body {
+    background-color: #7b7065; /* Fondo general de la página */
+}
+
+/* Ajuste de colores en el modo de enfoque */
+.mat-form-field.mat-focused .mat-form-field-label {
+    color: #6a301f; /* Etiqueta cuando el campo está enfocado */
+}
+
+.mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: #6a301f; /* Línea de enfoque */
+}

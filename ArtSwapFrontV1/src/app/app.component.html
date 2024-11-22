@@ -1,0 +1,125 @@
+<div class="body">
+
+  <mat-toolbar class="custom-toolbar" *ngIf="verificar()">
+    <div class="left-menu">
+
+        <button mat-button [routerLink]="['/homes']" style="color: white">
+          <mat-icon>home</mat-icon>Home
+        </button>
+
+        <div class="button-section" fxLayout="row" fxLayoutWrap fxLayoutAlign="start center">
+          <button mat-button [matMenuTriggerFor]="MenuGeneral" style="color: white"  class="menu-button">
+            <mat-icon>list</mat-icon>Opciones
+          </button>
+        </div>
+      </div>
+
+
+      <div class="right-menu">
+        <button mat-button [matMenuTriggerFor]="menu5"><mat-icon>account_circle</mat-icon></button>
+        <mat-menu #menu5="matMenu">
+          <button mat-menu-item routerLink="" (click)="cerrar()">
+            <mat-icon>logout</mat-icon>
+            <span>Cerrar sesión</span>
+          </button>
+          <button mat-menu-item class="custom-menu-item">
+            Rol:
+            <span>{{role}}</span> </button>
+
+        </mat-menu>
+      </div>
+  </mat-toolbar>     
+  
+
+      <mat-menu #MenuGeneral="matMenu">
+        <!-- Payment Methods -->
+        <button mat-menu-item [matMenuTriggerFor]="Menumetodopagos"><mat-icon>payment</mat-icon>Metodos de pago</button>
+        <mat-menu #Menumetodopagos="matMenu">
+          <button mat-menu-item routerLink="/metodoPagos"><mat-icon>list</mat-icon>Listar Metodos de Pagos</button>
+          <button mat-menu-item routerLink="/metodoPagos/nuevo" }><mat-icon>playlist_add</mat-icon>Registrar Metodo de Pago</button>
+          <button mat-menu-item routerLink="/reportes/cantMetodopago">Cantidad de metodos de pago</button>
+        </mat-menu>
+
+        <!-- Communities -->
+        <button mat-menu-item [matMenuTriggerFor]="Menucomunidades"><mat-icon>people_outline</mat-icon>Comunidades</button>
+        <mat-menu #Menucomunidades="matMenu">
+          <button mat-menu-item routerLink="/comunidades"><mat-icon>list</mat-icon>Listar Comunidades</button>
+          <button mat-menu-item routerLink="/comunidades/nuevo"><mat-icon>playlist_add</mat-icon>Registrar Comunidades</button>
+        </mat-menu>
+
+        <!-- Roles -->
+        <button mat-menu-item [matMenuTriggerFor]="MenuRoles" *ngIf="isAdmin()"><mat-icon>poll</mat-icon>Roles</button>
+        <mat-menu #MenuRoles="matMenu">
+          <button mat-menu-item routerLink="/roles"><mat-icon>list</mat-icon>Listar Roles</button>
+          <button mat-menu-item routerLink="/roles/nuevo"><mat-icon>playlist_add</mat-icon>Registrar Roles</button>
+        </mat-menu>
+
+        <!-- Users -->
+        <button mat-menu-item [matMenuTriggerFor]="MenuUsuarios" *ngIf="isAdmin()"><mat-icon>person</mat-icon>Usuarios</button>
+        <mat-menu #MenuUsuarios="matMenu">
+          <button mat-menu-item routerLink="/usuarios"><mat-icon>list</mat-icon>Listar Usuarios</button>
+          <button mat-menu-item routerLink="/usuarios/nuevo"><mat-icon>playlist_add</mat-icon>Registrar Usuario</button>
+        </mat-menu>
+
+        <!-- Reviews -->
+        <button mat-menu-item [matMenuTriggerFor]="MenuResenha"><mat-icon>rate_review</mat-icon>Reseñas</button>
+        <mat-menu #MenuResenha="matMenu">
+          <button mat-menu-item routerLink="/resenha"><mat-icon>list</mat-icon>Listar Reseñas</button>
+          <button mat-menu-item routerLink="/resenha/nuevo"><mat-icon>playlist_add</mat-icon>Registrar Reseña</button>
+        </mat-menu>
+
+        <!-- Artwork -->
+        <button mat-menu-item [matMenuTriggerFor]="MenuObradeArte"><mat-icon>photo_album</mat-icon>Obra de Arte</button>
+        <mat-menu #MenuObradeArte="matMenu">
+          <button mat-menu-item routerLink="/obraartes"><mat-icon>list</mat-icon>Listar Obras de Arte</button>
+          <button mat-menu-item routerLink="/obraartes/nuevo"><mat-icon>playlist_add</mat-icon>Registrar Obras de Arte</button>
+          <button mat-menu-item routerLink="/obraartes">obras por persona</button>
+        </mat-menu>
+
+        <!-- Sales -->
+        <button mat-menu-item [matMenuTriggerFor]="MenuVenta" *ngIf="isArtista()|| isAdmin()"><mat-icon>shopping_basket</mat-icon>Ventas</button>
+        <mat-menu #MenuVenta="matMenu">
+          <button mat-menu-item routerLink="/ventas"><mat-icon>list</mat-icon>Listar Ventas</button>
+          <button mat-menu-item routerLink="/ventas/nuevo"><mat-icon>playlist_add</mat-icon>Registrar Venta</button>
+          <button mat-menu-item routerLink="/reportes/descripcionobrasvendidas">obras vendidas</button>
+        </mat-menu>
+
+        <!-- Events -->
+        <button mat-menu-item [matMenuTriggerFor]="MenuEvento" *ngIf="isArtista() || isAdmin()"><mat-icon>event_note</mat-icon>Evento</button>
+        <mat-menu #MenuEvento="matMenu">
+          <button mat-menu-item routerLink="/eventos"><mat-icon>list</mat-icon>Listar Eventos</button>
+          <button mat-menu-item routerLink="/eventos/nuevo"><mat-icon>playlist_add</mat-icon>Registrar Evento</button>
+          <button mat-menu-item routerLink="/reportes/persona">Eventos por persona</button>
+        </mat-menu>
+
+        <!-- Exchange -->
+        <button mat-menu-item [matMenuTriggerFor]="MenuIntercambio" *ngIf="isArtista() || isAdmin()"><mat-icon>find_replace</mat-icon>Intercambio</button>
+        <mat-menu #MenuIntercambio="matMenu">
+          <button mat-menu-item routerLink="/intercambios"><mat-icon>list</mat-icon>Listar intercambio</button>
+          <button mat-menu-item routerLink="/intercambios/nuevo"><mat-icon>playlist_add</mat-icon>Registrar intercambio</button>
+        </mat-menu>
+
+        <!-- Auction -->
+        <button mat-menu-item [matMenuTriggerFor]="MenuSubasta" *ngIf="isArtista() || isAdmin()"><mat-icon>unarchive</mat-icon>Subasta</button>
+        <mat-menu #MenuSubasta="matMenu">
+          <button mat-menu-item routerLink="/subastas"><mat-icon>list</mat-icon>Listar subastas</button>
+          <button mat-menu-item routerLink="/subastas/nuevo"><mat-icon>playlist_add</mat-icon>Registrar subastas</button>
+          <button mat-menu-item routerLink="/subastas">Mostrar subastas activas</button>
+          <button mat-menu-item routerLink="/subastas">Total recaudado por subasta</button>
+        </mat-menu>
+
+        <!-- Favorites -->
+        <button mat-menu-item [matMenuTriggerFor]="MenuFavorito"><mat-icon>favorite</mat-icon>Favorito</button>
+        <mat-menu #MenuFavorito="matMenu">
+          <button mat-menu-item routerLink="/favoritos"><mat-icon>list</mat-icon>Listar favoritos</button>
+          <button mat-menu-item routerLink="/favoritos/nuevo"><mat-icon>playlist_add</mat-icon>Registrar favoritos</button>
+        </mat-menu>
+
+        
+
+      </mat-menu>
+    
+     
+
+  <router-outlet></router-outlet>
+</div>

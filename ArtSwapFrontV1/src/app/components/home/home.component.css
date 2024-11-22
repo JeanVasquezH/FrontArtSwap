@@ -1,0 +1,156 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman'; /* Fuente global */
+    color: #333;
+    background-color: #f7f7f7;
+    height: 100%;
+  }
+  
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    background-color: #c3bebb;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 30px 20px;
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 1.8rem; /* Tamaño reducido */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para resaltar texto */
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero-text {
+    max-width: 50%;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #6a301f;
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  .hero-image img {
+    max-width: 300px; /* Limit image size */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Roles Section */
+  .roles {
+    padding: 40px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+  }
+  
+  .roles h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .roles-list {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .role-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 300px;
+  }
+  
+  .role-item h3 {
+    color: #e4ad5e;
+  }
+  
+  .role-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Funcionalidades Section */
+  .funcionalidades {
+    padding: 40px 20px;
+    background-color: #fff;
+  }
+  
+  .funcionalidades h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .funcionalidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .funcionalidad-item {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .funcionalidad-item h3 {
+    color: #6a11cb;
+  }
+  
+  .funcionalidad-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin-top: auto;
+    font-size: 0.9rem;
+  }
+  
+  .footer p {
+    margin: 0;
+  }

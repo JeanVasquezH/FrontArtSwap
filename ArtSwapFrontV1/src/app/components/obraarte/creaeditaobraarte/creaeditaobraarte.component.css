@@ -1,0 +1,86 @@
+/* Contenedor principal: define el ancho máximo, margen y estilo del contenedor del formulario */
+.container {
+    max-width: 600px; /* Limita el ancho máximo para que el formulario se vea bien en pantallas grandes */
+    margin: 5% auto; /* Centra el contenedor horizontalmente y le da margen vertical */
+    text-align: center; /* Centra el texto y los elementos internos */
+    padding: 20px; /* Añade un espacio interno para que los elementos no estén pegados al borde */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Añade una sombra ligera para un efecto de profundidad */
+    border-radius: 8px; /* Bordes redondeados para darle un aspecto moderno */
+    background-color: #f9f9f9; /* Fondo claro para resaltar el formulario */
+}
+
+/* Encabezado del formulario */
+.container h1 {
+    color: #333; /* Color de texto oscuro para contraste con el fondo */
+    margin-bottom: 20px; /* Espacio debajo del título para separar del primer campo */
+}
+
+/* Ajusta el ancho de cada campo de formulario (mat-form-field) */
+mat-form-field {
+    width: 100%; /* Ancho completo del contenedor para alinearse con los otros elementos */
+    margin-bottom: 15px; /* Espacio entre cada campo para una mejor separación visual */
+}
+
+/* Estilo del botón personalizado */
+.custom-button {
+    background-color: #4C868C; /* Color rojo vibrante */
+    color: white; /* Color de texto en blanco para contraste */
+    padding: 8px 16px; /* Espacio interno para agrandar el botón y hacerlo más clickeable */
+    border-radius: 4px; /* Bordes ligeramente redondeados */
+    font-weight: bold; /* Texto en negrita para destacar */
+    transition: background-color 0.3s ease; /* Transición suave para un efecto visual agradable al hacer hover */
+}
+
+/* Cambio de color del botón al pasar el cursor */
+.custom-button:hover {
+    background-color: #8cf3ff; /* Color un poco más oscuro para dar un efecto de interacción */
+}
+
+/* Oculta los saltos de línea (br) en el contenedor para evitar espacios innecesarios */
+.container br {
+    display: none;
+}
+
+/* Estilo adicional para el botón plano de Angular Material */
+button[mat-flat-button] {
+    margin-top: 20px; /* Espacio superior para separarlo de los campos del formulario */
+    padding: 10px 24px; /* Agranda el botón para mejorar la experiencia de clic */
+    font-size: 16px; /* Tamaño de fuente ligeramente mayor para mejorar la visibilidad */
+}
+
+/* Ajusta el ancho completo del selector de Angular Material (mat-select) */
+mat-select {
+    width: 100%; /* Ancho completo para que se alinee con otros campos */
+}
+
+/* Tamaño y estilo de las entradas de texto y textarea */
+mat-input-element, textarea {
+    font-size: 14px; /* Tamaño de fuente moderado para buena legibilidad */
+    padding: 10px; /* Espacio interno para que el texto no esté pegado al borde */
+}
+mat-form-field {
+    width: 100%; /* Asegura que los campos ocupen todo el ancho disponible */
+    margin-bottom: 20px; /* Mantén un margen adecuado para separar los campos */
+}
+mat-label {
+    font-size: 25px;  /* Aumenta el tamaño de la fuente de las etiquetas para mejorar su visibilidad */
+    white-space: nowrap; /* Asegura que el texto de la etiqueta no se rompa */
+}
+/* Estilo para el contenedor de la vista previa de la imagen */
+.image-preview {
+    max-width: 100%; /* Asegura que el contenedor no sea más grande que su contenedor padre */
+    display: flex; /* Usamos flexbox para alinear la imagen en el centro */
+    justify-content: center; /* Centra la imagen horizontalmente */
+    align-items: center; /* Centra la imagen verticalmente */
+    overflow: hidden; /* Asegura que la imagen no se desborde del contenedor */
+    margin-top: 20px; /* Espacio superior para separar la vista previa de la imagen de otros elementos */
+}
+
+/* Estilo para la imagen de la vista previa */
+.imagen-img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    max-height: 300px; /* Limita la altura máxima de la imagen */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    object-fit: contain; /* Ajusta la imagen para que se muestre completa sin recortarse */
+    border-radius: 8px; /* Añade bordes redondeados a la imagen */
+}

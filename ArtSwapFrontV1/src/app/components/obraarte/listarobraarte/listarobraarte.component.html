@@ -1,0 +1,41 @@
+<div class="container">
+    <div style="text-align: center; margin: 5%;">
+      <h1>Lista de Obras de Arte</h1>
+    </div>
+  
+    <div class="card-container">
+      <div class="card" *ngFor="let element of dataSource.data">
+        <img
+          *ngIf="element.imagenobra"
+          [src]="element.imagenobra"
+          alt="{{ element.titulo }}"
+          class="imagen-img"
+        />
+        <div class="card-content">
+          <h2>{{ element.titulo }}</h2>
+          <p><strong>Descripción:</strong> {{ element.descripcion }}</p>
+          <p><strong>Fecha de Creación:</strong> {{ element.fechaCreacion }}</p>
+          <p><strong>Estado:</strong> {{ element.estado }}</p>
+          <p><strong>Precio:</strong> S/. {{ element.precio }}</p>
+          <p><strong>Valoración:</strong> {{ element.valoracion }}</p>
+          <p><strong>Creador:</strong> {{ element.usua.nombre }}</p>
+          <p><strong>Comentarios:</strong> {{ element.resen.comentario }}</p>
+          <div class="card-actions">
+            <mat-icon
+              style="cursor: pointer; color: hsl(189, 100%, 47%)"
+              (click)="eliminar(element.idObraArte)"
+            >
+              delete_outline
+            </mat-icon>
+            <mat-icon
+              style="cursor: pointer; color: hsl(189, 100%, 47%)"
+              [routerLink]="['ediciones', element.resen.idResenha]"
+            >
+              edit
+            </mat-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

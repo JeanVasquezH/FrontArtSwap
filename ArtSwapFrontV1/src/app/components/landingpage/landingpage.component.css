@@ -1,0 +1,225 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff; /* blanco */
+    color: #2e2e2e; /* gris oscuro */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2e2e2e; /* gris oscuro */
+    color: #ffffff; /* blanco */
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* blanco */
+    font-weight: bold;
+}
+
+.auth-buttons button {
+    background-color: #e4ad5e; /* dorado */
+    color: #ffffff; /* blanco */
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.auth-buttons button:hover {
+    background-color: #c3bebb; /* gris suave */
+}
+
+/* Section Styles */
+section {
+    padding: 40px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2, h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #6a301f; /* marrón oscuro */
+}
+
+p {
+    font-size: 1rem;
+    color: #555555; /* gris medio */
+}
+
+/* Welcome Section */
+.welcome {
+    background-color: #f8f9fa; /* fondo suave */
+    padding-top: 40px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Mission Section */
+.mission {
+    background-color: #c3bebb; /* gris suave */
+}
+
+.mission-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.mission-content img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* How It Works */
+.how-it-works .steps {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.step img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Plans Section */
+.plans .plan-cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.plan-card {
+    background-color: #ffffff; /* blanco */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+}
+
+.plan-card button {
+    background-color: #28a745; /* verde */
+    color: #ffffff; /* blanco */
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.plan-card button:hover {
+    background-color: #218838; /* verde oscuro */
+}
+
+/* Footer */
+footer {
+    background-color: #343a40; /* gris oscuro */
+    color: #ffffff; /* blanco */
+    padding: 20px;
+    text-align: center;
+}
+
+.socials a {
+    margin: 0 10px;
+    color: #ffffff; /* blanco */
+    text-decoration: none;
+}
+
+.socials a:hover {
+    color: #e4ad5e; /* dorado */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .plan-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mission-content {
+        flex-direction: column;
+    }
+
+    .steps {
+        flex-direction: column;
+    }
+}
+
+.custom-footer .socials img:hover {
+    transform: scale(1.2); /* Aumenta el tamaño en hover */
+    filter: brightness(1.3); /* Hace el ícono más brillante en hover */
+}
+.custom-footer .socials {
+    margin-left: 10px; /* Espacio entre el texto y los íconos */
+}
+.custom-footer .socials img {
+    width: 35px; /* Tamaño de los íconos de redes sociales */
+    margin: 0 10px; /* Espacio entre íconos */
+    vertical-align: middle; /* Alinea verticalmente los íconos con el texto */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transición en hover */
+}
+.custom-footer {
+    background-color: #222; /* Fondo oscuro para el pie de página */
+    color: white; /* Texto en blanco */
+    display: flex; /* Alinea los elementos en una sola línea */
+    justify-content: center; /* Centra todo el contenido en una línea */
+    align-items: center; /* Alinea verticalmente los elementos */
+    padding: 1rem; /* Espacio alrededor del contenido */
+    font-family: "Times New Roman", Times, serif; /* Fuente clásica */
+    position: relative; /* Necesario para mantenerlo en su lugar */
+    bottom: 0; /* Mantiene el pie de página en la parte inferior */
+    width: 100%; /* Asegura que el pie de página ocupe todo el ancho */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Sombra para destacar el pie de página */
+}
